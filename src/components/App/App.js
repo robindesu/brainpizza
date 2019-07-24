@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Header from '../Header/Header';
+import HeadCard from '../HeadCard/HeadCard';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header/>
+        <HeadCard/>
         <div className="App-content">
-          <p>Monte sua pizza ou escolha uma Sugestão.
-          A cada compra Ganhe nossos Pontos de Fidelidade.</p>
+         
         </div>
       </div>
     );
