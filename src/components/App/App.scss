@@ -1,25 +1,11 @@
+@import '../../styles/variables';
+
 body{
   font-family: 'Raleway', sans-serif;
   margin: 0;
+  background-color: $grey;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #ffab4c;
-  height: 100px;
-  padding: 20px;
-  color: rgb(110, 109, 109);
-}
-
-.App-intro {
+.App-content {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  padding: 0 3%;
 }
