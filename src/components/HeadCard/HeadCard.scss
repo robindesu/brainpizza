@@ -1,8 +1,40 @@
+@import '../../styles/variables';
+
 .head-card{
-    width: 80vw;
-    height: 20vh;
+    min-height: 20vh;
     background-color: white;
     position: absolute;
     top: 11%;
-    left: 10vw;
+    left: 50%;
+    transform: translatex(-50%);
+    display: inline-flex;
+    text-align: center;
+    padding-bottom: 40px;
+    .left-part{
+        color: $pink;
+        padding: 2%;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .right-part{
+        .top-button{
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            padding: 20px;
+            background-color: $pink;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+@media(max-width: 600px){
+    .head-card{
+        min-width: 80%;
+        .top-button{
+            bottom: -20px;
+        }
+    }
 }

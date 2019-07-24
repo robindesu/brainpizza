@@ -5,8 +5,12 @@ class HeadCard extends Component {
   render() {
     return ( 
         <div className='head-card'>
-              <p>Monte sua pizza ou escolha uma Sugestão.
-              A cada compra Ganhe nossos Pontos de Fidelidade.</p>
+            <div className='left-part'>
+                <p>Monte sua Pizza ou escolha uma Sugestão Abaixo</p>
+            </div>
+            <div className='right-part'>
+                <a className='top-button'>Montar > </a>
+            </div>
           </div>
         );
     }
