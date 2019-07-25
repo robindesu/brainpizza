@@ -1,5 +1,7 @@
+@import './variables';
+
 .grid-container{
-    margin-top: 17%;
+    margin-top: 12em;
 }
 .row{
     display: flex;
@@ -26,5 +28,17 @@
     transition: all 0.2s ease-in;
     &:hover{
         box-shadow: 0.3px 0.5px 7px 7px rgba(0, 0, 0, 0.2);
+    }
+    .pic-box{
+        width: 140px;
+        height: 100%;
+        position: relative;
+    }
+    h4{
+        color: $orange-b;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
     }
 }

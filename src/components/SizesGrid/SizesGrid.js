@@ -10,6 +10,17 @@ class SizesGrid extends Component {
                     <div className='column'>
                         <SizeCard/>
                     </div>
+                    <div className='column'>
+                        <SizeCard/>
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='column'>
+                        <SizeCard/>
+                    </div>
+                    <div className='column'>
+                        <SizeCard/>
+                    </div>
                 </div>
             </div>
         );

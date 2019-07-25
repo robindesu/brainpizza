@@ -1,25 +1,19 @@
 @import '../../styles/variables';
+
 .suggest-card{
     .card{
         .pic-box{
             background-color: $orange-b;
-            width: 140px;
-            height: 100%;
-            position: relative;
-        }
-        img{
-            max-width: 200px;
-            position: absolute;
-            left: -60px;
+            img{
+                position: absolute;
+                left: -60px;
+                max-width: 200px;
+            }
         }
         .text-box{
             margin-left: 20px;
             .pizza-title{
                 color: $orange-b;
-                font-weight: 600;
-                font-size: 1.5rem;
-                margin-top: 1rem;
-                margin-bottom: 0.5rem;
             }
         }
       }
