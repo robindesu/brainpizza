@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SuggestsGrid.scss';
-import PizzaPic from './pizza-slice.png'
+import SuggestCard from '../SuggestCard/SuggestCard'
 
 class SuggestsGrid extends Component {
     render() {
@@ -9,34 +9,18 @@ class SuggestsGrid extends Component {
                 <div className='grid-container'>
                     <div className='row'>
                         <div className='column'>
-                            <div className='card'>
-                                <div className='pic-box'>
-                                <img src={PizzaPic}></img>
-                                </div>
-                                <div className='text-box'>
-                                    <h4 className='pizza-title'>
-                                        Sabor Banana com Quiabo
-                                    </h4>
-                                    <p>Descrição: Banana</p>
-                                </div>
-                            </div>
+                            <SuggestCard/>
                         </div>
                         <div className='column'>
-                            <div className='card'>
-                                test
-                            </div>
+                            <SuggestCard/>
                         </div>
                     </div>
                     <div className='row'>
                         <div className='column'>
-                            <div className='card'>
-                                test
-                            </div>
+                            <SuggestCard/>
                         </div>
                         <div className='column'>
-                            <div className='card'>
-                                test
-                            </div>
+                            <SuggestCard/>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,6 @@
     transform: translatex(-50%);
     display: inline-flex;
     text-align: center;
-    padding-bottom: 40px;
     .left-part{
         color: $pink;
         padding: 2%;
@@ -30,9 +29,10 @@
     }
 }
 
-@media(max-width: 600px){
+@media(max-width: 800px){
     .head-card{
         min-width: 80%;
+        padding-bottom: 40px;
         .top-button{
             bottom: -20px;
         }

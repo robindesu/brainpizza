@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.card{
+    display: flex;
+    width: 360px;
+    height: 220px;
+    background-color: #fff;
+    box-shadow: 0.3px 0.5px 7px 2px rgba(0, 0, 0, 0.2);
+    .pic-box{
+        background-color: $orange-b;
+        width: 140px;
+        height: 100%;
+        position: relative;
+    }
+    img{
+        max-width: 200px;
+        position: absolute;
+        left: -60px;
+    }
+    .text-box{
+        margin-left: 20px;
+        .pizza-title{
+            color: $orange-b;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+  }

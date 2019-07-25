@@ -1,0 +1,17 @@
+.grid-container{
+    margin-top: 17%;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+.column{
+    margin-top: 2em;
+}
+@media(min-width: 800px){
+    .column{
+        margin-top: 0;
+    }
+}
