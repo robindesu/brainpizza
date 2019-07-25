@@ -4,7 +4,7 @@ import './SizeCard.scss';
 
 function SizeCard(){
     return (
-        <div className='card'>
+        <div className='card size-card'>
             <div className='pic-box'>
                 <img src={pizza}></img>
             </div>

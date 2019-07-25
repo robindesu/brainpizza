@@ -1,5 +1,12 @@
 @import '../../styles/variables';
 
+.logo{
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+}
 .App-logo {
     animation: App-logo-spin infinite 20s linear;
     height: 80px;

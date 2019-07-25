@@ -2,11 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './Header.scss'
 
-function Header() {
+function Header(props) {
     return (
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Brain Pizza</h2>
+          <a className='logo' href='/' onClick={() => props.onChangePage(0)}>
+            <img src={logo} className="App-logo" alt="logo" />
+            <h2>Brain Pizza</h2>
+          </a>
         </div>
     );
 }
