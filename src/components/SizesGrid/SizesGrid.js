@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SizeCard from '../SizeCard/SizeCard';
 
+
 class SizesGrid extends Component {
     render() {
         return (
@@ -14,3 +15,4 @@ class SizesGrid extends Component {
         );
     }
 }
+export default SizesGrid;

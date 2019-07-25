@@ -9,7 +9,7 @@ class HeadCard extends Component {
                 <p>Monte sua Pizza ou escolha uma Sugestão Abaixo</p>
             </div>
             <div className='right-part'>
-                <a className='top-button'>Montar > </a>
+                <a className='top-button' href='./size'>Montar > </a>
             </div>
           </div>
         );

@@ -5,7 +5,7 @@ import './SuggestCard.scss'
 
 function SuggestCard() {
     return (
-        <div>
+        <div className='suggest-card'>
             <div className='card'>
                 <div className='pic-box'>
                 <img src={PizzaPic}></img>
