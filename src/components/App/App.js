@@ -1,5 +1,4 @@
 import React, { useState} from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.scss';
 import Header from '../Header/Header';
 import HeadCard from '../HeadCard/HeadCard';
@@ -19,15 +18,19 @@ function App() {
     setPage(page);
     setTitle(titlesList[page]);
   }
+    let centerContent = ''; 
+    if(page == 0){
+      centerContent = <SuggestsGrid/>
+    }
+    else if(page == 1 ){
+      centerContent = <SizesGrid/>
+    }
     return (
       <div className="App">
         <Header onChangePage={changePage}/>
         <HeadCard title={headTitle} onChangePage={changePage}/>
         <div className="App-content">
-          <Router >
-            <Route  exact path="/" component={SuggestsGrid} />
-            <Route  exact path="/size" component={SizesGrid} />
-          </Router>
+          {centerContent}
         </div>
       </div>
     );

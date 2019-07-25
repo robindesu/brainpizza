@@ -1,6 +1,5 @@
 import React from 'react';
 import './HeadCard.scss';
-import {Link} from 'react-router-dom';
 
 const HeadCard = (props) =>{
     return ( 
@@ -9,7 +8,7 @@ const HeadCard = (props) =>{
                 <p>{props.title}</p>
             </div>
             <div className='right-part'>
-                <a className='top-button' to='/size' onClick={() => props.onChangePage(1)}>Montar > </a>
+                <a className='top-button' onClick={() => props.onChangePage(1)}>Montar > </a>
             </div>
           </div>
         );
