@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.grid-container{
+    margin-top: 17%;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+.column{
+    margin-top: 2em;
+}
+@media(min-width: 800px){
+    .column{
+        margin-top: 0;
+    }
+}
+
+.card{
+    display: flex;
+    width: 360px;
+    height: 220px;
+    background-color: #fff;
+    box-shadow: 0.3px 0.3px 2px 2px rgba(0, 0, 0, 0.2);
+    .pic-box{
+        background-color: $orange-b;
+        width: 140px;
+        height: 100%;
+        position: relative;
+    }
+    img{
+        max-width: 200px;
+        position: absolute;
+        left: -60px;
+    }
+    .text-box{
+        margin-left: 20px;
+        .pizza-title{
+            color: $orange-b;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+    }
+  }
+
