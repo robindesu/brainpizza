@@ -20,19 +20,21 @@ function GridContainer (props) {
     const [suggestOrder, setsuggestOrder ] = useState([]);
         
     if(props.page == 0){
-        FirebaseService.getSuggestions(dataReceived => {
+        FirebaseService.getData('suggestions', (dataReceived => {
             setSuggests(dataReceived);
-        });
+        }));
         dataList = suggests;
     }
     else if(props.page === 1){
-        FirebaseService.getSizes(dataReceived => {
+        FirebaseService.getData('sizes', (dataReceived => {
             setSizes(dataReceived);
-        });
+        }));
         dataList = sizes;
     }
-
     else if(props.page === 2){
+        FirebaseService.getData('doughs', (dataReceived => {
+            setDoughs(dataReceived);
+        }));
         dataList = doughs;
     }
     else if(props.page === 3){

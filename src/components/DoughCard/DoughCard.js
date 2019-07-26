@@ -9,7 +9,7 @@ function DoughCard(props){
             </div>
             <div className='text-box'>
                 <h4 className='size-title'>
-                    {props.dough}
+                    {props.dough.type}
                 </h4>
             </div>
         </div>

@@ -18,10 +18,10 @@ function Grid (props) {
                                         setsuggestOrder={props.setsuggestOrder}/>
                         }
                         else if(props.page === 1){
-                            cardType = <SizeCard size={ele} key={index}  onChangePage={props.onChangePage}/>
+                            cardType = <SizeCard size={ele} key={ele.id} onChangePage={props.onChangePage}/>
                         }
                         else if(props.page === 2){
-                            cardType = <DoughCard dough={ele} key={index}  onChangePage={props.onChangePage}/>
+                            cardType = <DoughCard dough={ele} key={ele.id}   onChangePage={props.onChangePage}/>
                         }
                         else if(props.page === 3){
                             cardType = <FlavorCard flavor={ele} key={index}  onChangePage={props.onChangePage}/>
