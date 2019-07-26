@@ -1,7 +1,7 @@
 import {firebaseDatabase} from '../utils/firebaseUtil'
 
 export default class FirebaseService {
-    // suggestionsPath = '';
+
     static getSuggestions = (callback) => {
         firebaseDatabase.collection('suggestions').get()
         .then(dataSnapshot => {
@@ -13,5 +13,11 @@ export default class FirebaseService {
             });
             callback(list);
         });
+    };
+    static setOrder = (pizzaId, callback) => {
+        firebaseDatabase.collection('suggestions').doc(pizzaId).get()
+        .then(doc => {
+            callback(doc.data());
+        })
     };
 }

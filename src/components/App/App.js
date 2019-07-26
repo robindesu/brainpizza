@@ -9,6 +9,7 @@ import GridContainer from '../Grid/GridContainer';
   Page 1 = Size
   Page 2 = Dough
   Page 3 = Flavor
+  Page 4 = Order Confirmation
 **/
 function App() {
   let centerContent = ''; 
@@ -17,6 +18,7 @@ function App() {
     'Escolha o Tamanho da sua Pizza',
     'Escolha a Massa da sua Pizza',
     'Escolha o Sabor da sua Pizza',
+    'Recebemos seu Pedido',
   ];
   const [page, setPage] = useState(0);
   const [headTitle, setTitle] = useState(titlesList[0]);

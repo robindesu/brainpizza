@@ -1,29 +1,30 @@
 import React from 'react';
-import PizzaPic from './pizza-slice.png'
-import './SuggestCard.scss'
+import PizzaPic from './pizza-slice.png';
+import './OrderCard.scss';
 
-
-function SuggestCard(props) {
-    const handleClick = () =>{
-        props.onChangePage(4);
-        props.setsuggestOrder(props.suggest.id);
+function OrderCard(props){
+    let pointsBox = '';
+    if(props.order.points){
+            pointsBox = <div className='points-box'>
+            Por Escolher nossa sugestão você ganhou {props.order.points} pontos!
+        </div>
     }
     return (
-        <div className='suggest-card' onClick={() => handleClick()}>
+        <div className='suggest-card'>
+            {pointsBox}
             <div className='card'>
                 <div className='pic-box'>
                 <img src={PizzaPic}></img>
                 </div>
                 <div className='text-box'>
                     <h4 className='pizza-title'>
-                        {props.suggest.flavor}
+                        {props.order.flavor}
                     </h4>
                     <p>Tamanho: Médio</p>
                     <p>Massa: Integral</p>
-                    <p>Preço: R${props.suggest.price}</p>
                 </div>
             </div>
-        </div>
+    </div>
     );
 }
-export default SuggestCard;
+export default OrderCard;

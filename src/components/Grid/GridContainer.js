@@ -20,23 +20,35 @@ function GridContainer (props) {
         {'flavor': 'Banana com Quiabo', price : '10' },
         {'flavor': 'Banana com Quiabo', price : '10' },
     ]);
+    const [order, setOrder] = useState([]);
+    const [suggestOrder, setsuggestOrder ] = useState([]);
+        
     if(props.page == 0){
         FirebaseService.getSuggestions(dataReceived => {
             setSuggests(dataReceived);
         });
         dataList = suggests;
     }
-    else if(props.page == 1){
+    else if(props.page === 1){
         dataList = sizes;
     }
-    else if(props.page == 2){
+    else if(props.page === 2){
         dataList = doughs;
     }
-    else if(props.page == 3){
+    else if(props.page === 3){
         dataList = flavors;
     }
+    else if(props.page === 4){
+        if(suggestOrder){
+            FirebaseService.setOrder(suggestOrder, 
+                (dataReceived => {
+                    setOrder(dataReceived);
+                }));
+            dataList = [order];
+        }
+    }
     return (
-        <Grid page={props.page} dataList={dataList} onChangePage={props.onChangePage}/>
+        <Grid page={props.page} dataList={dataList} onChangePage={props.onChangePage} setsuggestOrder={setsuggestOrder}/>
     );
 }
 export default GridContainer;
