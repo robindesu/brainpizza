@@ -3,7 +3,7 @@ import PizzaPic from './pizza-slice.png'
 import './SuggestCard.scss'
 
 
-function SuggestCard() {
+function SuggestCard(props) {
     return (
         <div className='suggest-card'>
             <div className='card'>
@@ -12,11 +12,11 @@ function SuggestCard() {
                 </div>
                 <div className='text-box'>
                     <h4 className='pizza-title'>
-                        Sabor Banana com Quiabo
+                        {props.suggest.flavour}
                     </h4>
-                    <p>Tamanho: Pequeno</p>
+                    <p>Tamanho: Médio</p>
                     <p>Massa: Integral</p>
-                    <p>Preço: R$20</p>
+                    <p>Preço: R${props.suggest.price}</p>
                 </div>
             </div>
         </div>

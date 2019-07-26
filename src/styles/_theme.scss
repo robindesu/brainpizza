@@ -1,7 +1,7 @@
 @import './variables';
 
 .grid-container{
-    margin-top: 12em;
+    margin-top: 10em;
 }
 .row{
     display: flex;
@@ -14,7 +14,9 @@
 }
 @media(min-width: 800px){
     .column{
-        margin-top: 0;
+        width: 50%;
+        display: flex;
+        justify-content: center;
     }
 }
 
