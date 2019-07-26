@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import Grid from './Grid';
+import FirebaseService from '../../services/firebaseService';
 
 function GridContainer (props) {
+
     let dataList = [];
-    const [suggests, setSuggests] = useState([
-        {'flavor': 'Banana com Quiabo', price : '10' },
-        {'flavor': 'Banana com Quiabo', price : '10' },
-        {'flavor': 'Banana com Quiabo', price : '10' },
-        {'flavor': 'Banana com Quiabo', price : '10' },
-    ]);
+    const [suggests, setSuggests] = useState([]);
+    FirebaseService.getSuggestions(dataReceived => {
+        setSuggests(dataReceived);
+    });
+
     const [sizes, setSizes] = useState([
         {slices: '8', radius : '20'},
         {slices: '16', radius : '30'},
