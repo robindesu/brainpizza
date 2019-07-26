@@ -6,9 +6,9 @@ export default class FirebaseService {
         firebaseDatabase.collection('suggestions').get()
         .then(dataSnapshot => {
             let list = [];
-            const data = dataSnapshot.docs.map(doc => {                
+            const data = dataSnapshot.forEach(doc => {  
                 let item = doc.data();
-                // item['key'] = doc.key();
+                item = {...item, id: doc.id};
                 list.push(item);
             });
             callback(list);

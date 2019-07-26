@@ -6,9 +6,6 @@ function GridContainer (props) {
 
     let dataList = [];
     const [suggests, setSuggests] = useState([]);
-    FirebaseService.getSuggestions(dataReceived => {
-        setSuggests(dataReceived);
-    });
 
     const [sizes, setSizes] = useState([
         {slices: '8', radius : '20'},
@@ -24,6 +21,9 @@ function GridContainer (props) {
         {'flavor': 'Banana com Quiabo', price : '10' },
     ]);
     if(props.page == 0){
+        FirebaseService.getSuggestions(dataReceived => {
+            setSuggests(dataReceived);
+        });
         dataList = suggests;
     }
     else if(props.page == 1){

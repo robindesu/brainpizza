@@ -12,7 +12,7 @@ function Grid (props) {
             <div className='row'>
                     {props.dataList.map((ele, index) =>{
                         if(props.page === 0){
-                            cardType = <SuggestCard suggest={ele} key={index}/>
+                            cardType = <SuggestCard suggest={ele} key={ele.id}/>
                         }
                         else if(props.page === 1){
                             cardType = <SizeCard size={ele} key={index}  onChangePage={props.onChangePage}/>
