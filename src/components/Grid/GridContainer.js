@@ -6,11 +6,7 @@ function GridContainer (props) {
 
     let dataList = [];
     const [suggests, setSuggests] = useState([]);
-
-    const [sizes, setSizes] = useState([
-        {slices: '8', radius : '20'},
-        {slices: '16', radius : '30'},
-    ]);
+    const [sizes, setSizes] = useState([]);
     const [doughs, setDoughs] = useState([
         'Branca', 'Integral'
     ]);
@@ -30,8 +26,12 @@ function GridContainer (props) {
         dataList = suggests;
     }
     else if(props.page === 1){
+        FirebaseService.getSizes(dataReceived => {
+            setSizes(dataReceived);
+        });
         dataList = sizes;
     }
+
     else if(props.page === 2){
         dataList = doughs;
     }
