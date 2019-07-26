@@ -1,19 +1,33 @@
 import React from 'react';
+import './Grid.scss'
 import SuggestCard from '../SuggestCard/SuggestCard';
+import SizeCard from '../SizeCard/SizeCard';
+import DoughCard from '../DoughCard/DoughCard';
+import FlavorCard from '../FlavorCard/FlavorCard';
 
 function Grid (props) {
-    let cardType = ''
-
+    let cardType = '';
     return(
         <div className='grid-container'>
             <div className='row'>
                     {props.dataList.map((ele, index) =>{
-                        if(props.page == 0){
-                            return (
-                                <div className='column'>
-                                    <SuggestCard suggest={ele} key={index}/>
-                                </div>)
+                        if(props.page === 0){
+                            cardType = <SuggestCard suggest={ele} key={index}/>
                         }
+                        else if(props.page === 1){
+                            cardType = <SizeCard size={ele} key={index}  onChangePage={props.onChangePage}/>
+                        }
+                        else if(props.page === 2){
+                            cardType = <DoughCard dough={ele} key={index}  onChangePage={props.onChangePage}/>
+                        }
+                        else if(props.page === 3){
+                            cardType = <FlavorCard flavor={ele} key={index}  onChangePage={props.onChangePage}/>
+                        }
+                        return (
+                            <div className='column'>
+                                {cardType}
+                            </div>
+                        );
                     })}
             </div>
         </div>

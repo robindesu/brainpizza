@@ -10,9 +10,9 @@ function SizeCard(props){
             </div>
             <div className='text-box'>
                 <h4 className='size-title'>
-                   4 PEDAÇOS
+                   {props.size.slices} PEDAÇOS
                 </h4>
-                <p>Raio: 30cm</p>
+                <p>Raio: {props.size.radius} cm</p>
             </div>
         </div>
     );

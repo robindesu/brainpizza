@@ -2,11 +2,14 @@ import React, { useState} from 'react';
 import './App.scss';
 import Header from '../Header/Header';
 import HeadCard from '../HeadCard/HeadCard';
-import SuggestsGrid from '../SuggestsGrid/SuggestsGrid';
-import SizesGrid from '../SizesGrid/SizesGrid';
-import DoughsGrid from  '../DoughsGrid/DoughsGrid';
 import GridContainer from '../Grid/GridContainer';
 
+/** 
+  Page 0 = Suggestions
+  Page 1 = Size
+  Page 2 = Dough
+  Page 3 = Flavor
+**/
 function App() {
   let centerContent = ''; 
   const titlesList = [
@@ -22,24 +25,13 @@ function App() {
     setPage(page);
     setTitle(titlesList[page]);
   }
-    // if(page == 0){
-    //   centerContent = <SuggestsGrid/>
-    // }
-    // else if(page == 1 ){
-    //   centerContent = <SizesGrid onChangePage={changePage}/>
-    // }
-    // else if(page == 2 ){
-    //   centerContent = <DoughsGrid onChangePage={changePage}/>
-    // }
-    // else if(page == 3 ){
-    //   centerContent = <DoughsGrid onChangePage={changePage}/>
-    // }
+
     return (
       <div className="App">
         <Header onChangePage={changePage}/>
         <HeadCard title={headTitle} onChangePage={changePage} page={page}/>
         <div className="App-content">
-          <GridContainer page={page} />
+          <GridContainer page={page} onChangePage={changePage}/>
         </div>
       </div>
     );

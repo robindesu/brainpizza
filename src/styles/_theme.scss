@@ -1,25 +1,5 @@
 @import './variables';
 
-.grid-container{
-    margin-top: 10em;
-}
-.row{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 2em;
-}
-.column{
-    margin-top: 2em;
-}
-@media(min-width: 800px){
-    .column{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-}
-
 .card{
     display: flex;
     width: 360px;

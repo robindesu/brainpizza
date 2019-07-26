@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+.flavor-card{
+    .pic-box{
+        background-color: $orange-b;
+        img{
+            position: absolute;
+            left: -60px;
+            max-width: 200px;
+        }
+    }
+}

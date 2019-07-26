@@ -12,7 +12,7 @@ function SuggestCard(props) {
                 </div>
                 <div className='text-box'>
                     <h4 className='pizza-title'>
-                        {props.suggest.flavour}
+                        {props.suggest.flavor}
                     </h4>
                     <p>Tamanho: Médio</p>
                     <p>Massa: Integral</p>

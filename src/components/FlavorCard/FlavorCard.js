@@ -1,18 +1,19 @@
 import React from 'react';
 import pizza from './pizza-slice.png';
+import './FlavorCard.scss';
 
-function FlavourCard(props){
+function FlavorCard(props){
     return (
-        <div className='card size-card' onClick={() => props.onChangePage(4)}>
+        <div className='card flavor-card' onClick={() => props.onChangePage(4)}>
             <div className='pic-box'>
                 <img src={pizza}></img>
             </div>
             <div className='text-box'>
                 <h4 className='size-title'>
-                   Jiló com Açaí
+                   {props.flavor.flavor}
                 </h4>
             </div>
         </div>
     );
 }
-export default FlavourCard;
+export default FlavorCard;

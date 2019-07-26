@@ -9,7 +9,7 @@ function DoughCard(props){
             </div>
             <div className='text-box'>
                 <h4 className='size-title'>
-                    Integral
+                    {props.dough}
                 </h4>
             </div>
         </div>
