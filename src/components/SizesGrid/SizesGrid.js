@@ -1,29 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SizeCard from '../SizeCard/SizeCard';
 
 
-class SizesGrid extends Component {
-    render() {
+function SizesGrid (props) {
         return (
             <div className='grid-container'>
                 <div className='row'>
                     <div className='column'>
-                        <SizeCard/>
+                        <SizeCard onChangePage={props.onChangePage}/>
                     </div>
                     <div className='column'>
-                        <SizeCard/>
+                        <SizeCard onChangePage={props.onChangePage}/>
                     </div>
                 </div>
                 <div className='row'>
                     <div className='column'>
-                        <SizeCard/>
+                        <SizeCard onChangePage={props.onChangePage}/>
                     </div>
                     <div className='column'>
-                        <SizeCard/>
+                        <SizeCard onChangePage={props.onChangePage}/>
                     </div>
                 </div>
             </div>
         );
-    }
 }
 export default SizesGrid;

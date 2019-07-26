@@ -1,20 +1,18 @@
 import React from 'react';
 import pizza from './pizza.png';
-import './SizeCard.scss';
 
-function SizeCard(props){
+function DoughCard(props){
     return (
-        <div className='card size-card' onClick={() => props.onChangePage(2)}>
+        <div className='card size-card' onClick={() => props.onChangePage(3)}>
             <div className='pic-box'>
                 <img src={pizza}></img>
             </div>
             <div className='text-box'>
                 <h4 className='size-title'>
-                   4 PEDAÇOS
+                    Integral
                 </h4>
-                <p>Raio: 30cm</p>
             </div>
         </div>
     );
-}
-export default SizeCard;
+};
+export default DoughCard;

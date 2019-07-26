@@ -8,7 +8,7 @@ const HeadCard = (props) =>{
                 <p>{props.title}</p>
             </div>
             <div className='right-part'>
-                <a className='top-button' onClick={() => props.onChangePage(1)}>Montar > </a>
+                <a className={'top-button ' + (props.page > 0 ? 'disabled' : '')} onClick={() => props.onChangePage(1)}>Montar > </a>
             </div>
           </div>
         );
