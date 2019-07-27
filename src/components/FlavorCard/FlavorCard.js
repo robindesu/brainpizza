@@ -4,7 +4,7 @@ import './FlavorCard.scss';
 
 function FlavorCard(props){
     return (
-        <div className='card flavor-card' onClick={() => props.onChangePage(4)}>
+        <div className='card flavor-card'>
             <div className='pic-box'>
                 <img src={pizza}></img>
             </div>
@@ -12,6 +12,7 @@ function FlavorCard(props){
                 <h4 className='size-title'>
                    {props.flavor.flavor}
                 </h4>
+                <p>Price: R${props.flavor.price}</p>
             </div>
         </div>
     );

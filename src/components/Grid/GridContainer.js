@@ -7,15 +7,8 @@ function GridContainer (props) {
     let dataList = [];
     const [suggests, setSuggests] = useState([]);
     const [sizes, setSizes] = useState([]);
-    const [doughs, setDoughs] = useState([
-        'Branca', 'Integral'
-    ]);
-    const [flavors, setFlavors] = useState([
-        {'flavor': 'Banana com Quiabo', price : '10' },
-        {'flavor': 'Banana com Quiabo', price : '10' },
-        {'flavor': 'Banana com Quiabo', price : '10' },
-        {'flavor': 'Banana com Quiabo', price : '10' },
-    ]);
+    const [doughs, setDoughs] = useState([]);
+    const [flavors, setFlavors] = useState([]);
     const [order, setOrder] = useState([]);
     const [suggestOrder, setsuggestOrder ] = useState([]);
         
@@ -38,6 +31,9 @@ function GridContainer (props) {
         dataList = doughs;
     }
     else if(props.page === 3){
+        FirebaseService.getData('flavors', (dataReceived => {
+            setFlavors(dataReceived);
+        }));
         dataList = flavors;
     }
     else if(props.page === 4){
