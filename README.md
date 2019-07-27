@@ -15,5 +15,5 @@ yarn install
 
 ### Run
 ```
-yarn run
+yarn start
 ```
